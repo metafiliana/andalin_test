@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "c242283c-c744-4205-816a-e8d180ded5df",
+		"name": "node js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Afil",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "metafiliana@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "metafiliana@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNzU0MDJmODEzZThmYWJiYjQ2MDE1ZSIsImlhdCI6MTU1MTE4ODIyNCwiZXhwIjoxNTUxMTkxODI0fQ.0srFLPxMNU0nv5rsZimboGAD-6kHdUW_fBew3BJ59bA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Dilan 1998",
+							"type": "text"
+						},
+						{
+							"key": "released_on",
+							"value": "2019-02-24",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Ini adalah film dilan",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNzU0MDJmODEzZThmYWJiYjQ2MDE1ZSIsImlhdCI6MTU1MTE4ODIyNCwiZXhwIjoxNTUxMTkxODI0fQ.0srFLPxMNU0nv5rsZimboGAD-6kHdUW_fBew3BJ59bA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNzU0MDJmODEzZThmYWJiYjQ2MDE1ZSIsImlhdCI6MTU1MTE4ODIyNCwiZXhwIjoxNTUxMTkxODI0fQ.0srFLPxMNU0nv5rsZimboGAD-6kHdUW_fBew3BJ59bA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Film",
+							"type": "text"
+						},
+						{
+							"key": "released_on",
+							"value": "2019-02-25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/5c7541995a825cac197adf06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"5c7541995a825cac197adf06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNzU0MDJmODEzZThmYWJiYjQ2MDE1ZSIsImlhdCI6MTU1MTE4ODIyNCwiZXhwIjoxNTUxMTkxODI0fQ.0srFLPxMNU0nv5rsZimboGAD-6kHdUW_fBew3BJ59bA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Film Dilan",
+							"type": "text"
+						},
+						{
+							"key": "released_on",
+							"value": "2019-02-24",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/5c7541995a825cac197adf06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"5c7541995a825cac197adf06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjNzU0MDJmODEzZThmYWJiYjQ2MDE1ZSIsImlhdCI6MTU1MTE4ODIyNCwiZXhwIjoxNTUxMTkxODI0fQ.0srFLPxMNU0nv5rsZimboGAD-6kHdUW_fBew3BJ59bA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Film Dilan",
+							"type": "text"
+						},
+						{
+							"key": "released_on",
+							"value": "2019-02-24",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies/5c754a04800419aee31cbb64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies",
+						"5c754a04800419aee31cbb64"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
