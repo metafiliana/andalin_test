@@ -12,6 +12,11 @@ const MovieSchema = new Schema({
   		type: Date,
   		trim: true,
   		required: true
+ 	},
+ 	description: {
+  		type: String,
+  		trim: true,
+  		required: false
  	}
 });
 
